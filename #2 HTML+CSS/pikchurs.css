@@ -1,0 +1,10 @@
+img {
+  float: left;
+  width: 30%;
+  margin: 1.66%;
+}
+h2 {
+  margin: 1.66% 2% ;
+  border-bottom: 3px solid #115598;
+  font-family: 'Roboto Mono', monospace;
+}
