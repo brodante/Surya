@@ -13,19 +13,27 @@ using namespace std;
 //using namespace boost::multiprecision;
 int main()
 {
-  ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
-   cout.tie(NULL);
-   test(T)
-   {
-      lli a,b=0;
-      cin>>a;
-      lli ld=a%10;
-      lli fd;
-      while(a/=10)
-          b++;
-        b--;
-      fd=a/(10*b);
-      cout<<ld<<" and "<<fd<<'\n';
-   }
+  //ios_base::sync_with_stdio(false);
+   //cin.tie(NULL);
+   //cout.tie(NULL);
+   int a[2][3],b[3][2],temp=0;
+   foi(2)
+    foj(3)
+      cin>>a[i][j];
+   foi(3)
+    foj(2)
+      cin>>b[i][j];
+foi(2)
+  {
+    foj(2)
+      {
+        for(int k=0;k<3;k++)
+          {
+            temp+=(a[i][j]*b[j][i]);
+          }
+        cout<<temp<<" | ";
+        temp=0;
+      }
+    cout<<'\n';
+  }
  }

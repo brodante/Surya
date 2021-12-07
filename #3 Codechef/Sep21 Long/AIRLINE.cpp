@@ -18,14 +18,20 @@ int main()
    cout.tie(NULL);
    test(T)
    {
-      lli a,b=0;
-      cin>>a;
-      lli ld=a%10;
-      lli fd;
-      while(a/=10)
-          b++;
-        b--;
-      fd=a/(10*b);
-      cout<<ld<<" and "<<fd<<'\n';
+      int a[3],b,c,flag=0;
+      cin>>a[0]>>a[1]>>a[2]>>b>>c;
+      sort(a,a+3);
+      //cout<<a[2];
+      if(a[2]<=c)
+          flag=(a[0]+a[1]<=b?1:0);
+      else if(a[1]<=c)
+          flag=(a[0]+a[2]<=b?1:0);
+      else if(a[0]<=c)
+          flag=(a[1]+a[2]<=b?1:0);
+
+      if(flag)
+        cout<<"YES\n";
+      else
+        cout<<"NO\n";
    }
  }

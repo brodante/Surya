@@ -5,6 +5,7 @@
 #define lli long long
 #define pi 3.14159265358979323846
 #define MOD 1000000007
+#define unbuffer cin.clear(); cin.sync();
 #define foi(n)  for(lli i=0;i<n;i++)
 #define foj(n)  for(lli j=0;j<n;j++)
 #define test(T) lli T;cin>>T;while(T--)
@@ -18,14 +19,6 @@ int main()
    cout.tie(NULL);
    test(T)
    {
-      lli a,b=0;
-      cin>>a;
-      lli ld=a%10;
-      lli fd;
-      while(a/=10)
-          b++;
-        b--;
-      fd=a/(10*b);
-      cout<<ld<<" and "<<fd<<'\n';
+      cout<<T<<" = "<<(char)T<<'\n';
    }
  }

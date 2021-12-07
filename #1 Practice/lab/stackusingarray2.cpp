@@ -5,27 +5,48 @@
 #define lli long long
 #define pi 3.14159265358979323846
 #define MOD 1000000007
+#define unbuffer cin.clear(); cin.sync();
 #define foi(n)  for(lli i=0;i<n;i++)
 #define foj(n)  for(lli j=0;j<n;j++)
 #define test(T) lli T;cin>>T;while(T--)
 #define loop(i, a, b) for(int i = (a); i<= (b); i++)
 using namespace std;
 //using namespace boost::multiprecision;
+class Stack
+{
+
+}
+int top=-1;
+void push()
+{
+    cin>>val;
+    top++;
+    stack[top]=val;
+}
+void pop()
+{
+  cout<<"Deleted Stack is "<<stack[top];
+  top--;
+}
+void traverse()
+{
+  int temp=top;
+  while(temp--)
+    {
+      cout<<stack[temp]<<"/n";
+    }
+}
 int main()
 {
   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
-   cout.tie(NULL);
-   test(T)
-   {
-      lli a,b=0;
-      cin>>a;
-      lli ld=a%10;
-      lli fd;
-      while(a/=10)
-          b++;
-        b--;
-      fd=a/(10*b);
-      cout<<ld<<" and "<<fd<<'\n';
-   }
+   //cin.tie(NULL);
+   //cout.tie(NULL);
+
+
+   int n;
+   cin>>n;
+   int stack[n],top=-1,val;
+      push();
+      pop();
+
  }
