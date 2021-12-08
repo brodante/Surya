@@ -13,19 +13,22 @@
 using namespace std;
 //using namespace boost::multiprecision;
 #define n 5
-int Qu[n];
+int Qu[n],flag=0;
 int front=-1,rear=-1;
 void enQu(int x)
 {
-  if(rear==n-1)
+  if(rear==front && front!=0 &&flag )
     cout<<"Queue Overflow!!\n";
   else if(front==-1&&rear==-1)
     {
+      flag=1;
       front=rear=0;
       Qu[rear]=x;
     }
     else
     {
+      if(rear==n-1)
+        rear=-1;
       rear++;
       Qu[rear]=x;
     }

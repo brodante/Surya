@@ -25,15 +25,15 @@ int main()
    for(int i=0;i<3;i++)
     {
       for(int j=i;j<3;j++)
-        cout<<" ";
+        cout<<"   ";
       for(int j=0;j<i;j++)
-        cout<<"*";
+        cout<<" * ";
       if(temp%n==1)
-        cout<<"*";
+        cout<<" * ";
       else
-        cout<<" ";
+        cout<<"   ";
       for(int j=0;j<i;j++)
-        cout<<"*";
+        cout<<" * ";
       cout<<"\n";
       temp++;
     }
@@ -43,9 +43,9 @@ int main()
 for(int i=1;i<=n+1;i++)
 {
   if(i%n==1)
-    cout<<"*";
+    cout<<" * ";
   else
-    cout<<" ";
+    cout<<"   ";
 }
 
 cout<<"\n";
@@ -55,15 +55,15 @@ temp++;
 for(int i=0;i<3;i++)
  {
    for(int j=0;j<=i;j++)
-     cout<<" ";
+     cout<<"   ";
    for(int j=0;j<2-i;j++)
-     cout<<"*";
+     cout<<" * ";
    if((temp)%n==1)
-     cout<<"*";
+     cout<<" * ";
    else
-     cout<<" ";
+     cout<<"   ";
    for(int j=0;j<2-i;j++)
-     cout<<"*";
+     cout<<" * ";
    cout<<"\n";
    temp++;
  }
