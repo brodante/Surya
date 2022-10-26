@@ -16,11 +16,9 @@ using namespace std;
 //using namespace boost::multiprecision;
 int main()
 {
-
-  int n;
-  cin>>n;
-
-
-
-
-}
+  //ios_base::sync_with_stdio(false);
+   //cin.tie(NULL);
+   lli n;
+   cin>>n;
+   cout<<(int)sqrt(n);
+ }

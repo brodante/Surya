@@ -3,8 +3,6 @@
 #include <bits/stdc++.h>
 //#include <boost/multiprecision/cpp_int.hpp>
 #define lli long long
-#define pb push_back
-#define eb emplace_back
 #define pi 3.14159265358979323846
 #define MOD 1000000007
 #define unbuffer cin.clear(); cin.sync();
@@ -17,10 +15,20 @@ using namespace std;
 int main()
 {
 
-  int n;
-  cin>>n;
+  int basic;
+  char grade;
+  double hra,df,pf,ans;
 
-
-
-
+  cin>>basic>>grade;
+  hra=(.20)*basic;
+  df=(.50)*basic;
+  pf=(.11)*basic;
+  ans=basic+hra+df-pf;
+  if(grade=='A')
+    ans+=1700;
+  else if(grade=='B')
+    ans+=1500;
+  else
+    ans+=1300;
+  cout<<round(ans);
 }

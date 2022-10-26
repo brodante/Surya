@@ -16,11 +16,32 @@ using namespace std;
 //using namespace boost::multiprecision;
 int main()
 {
-
-  int n;
-  cin>>n;
-
-
-
-
+    int n,temp,i=2,no;
+    cin>>n>>temp;
+    bool ans=true;
+    while(i<=n)
+    {
+        cin>>no;
+        if(no==temp)
+        {
+            cout<<"false";
+            return 0;
+        }
+        i++;
+        if(no<temp)
+        {
+            if(ans==false)
+            {
+                cout<<"false";
+                return 0;
+            }
+        }
+        else
+        {
+            if(ans==true)
+                ans=false;
+        }
+        temp=no;
+    }
+    cout<<"true";
 }

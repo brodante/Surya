@@ -1,5 +1,4 @@
-/*Code by Surya a.k.a Sunny*/
-/* by https://www.codechef.com/users/spsc */
+/*Code by Surya and Shravya*/
 #include <bits/stdc++.h>
 #include <string.h>
 #include <conio.h>
@@ -13,6 +12,7 @@
 #define test(T) lli T;cin>>T;while(T--)
 #define loop(i, a, b) for(int i = (a); i<= (b); i++)
 #define unbuffer cin.clear(); cin.sync();
+#define unbuffer2 cout.flush();
 #define option cout<<"Choose from one of the options below : \n\n\n";
 using namespace std;
 lli pass=0;
@@ -62,6 +62,7 @@ void save(string &backup)
     file<<backup;
     cout<<"The text is succesfully saved in a file named \""<<f<<"\""<<char(24)<<"\n\n\t";
     file.close();
+    getch();
   }
 void save2(string &backup)
   {
@@ -73,6 +74,7 @@ void save2(string &backup)
     file<<backup;
     cout<<"The text is succesfully saved in a file named \""<<f<<"\""<<char(24)<<"\n\n\t";
     file.close();
+    getch();
   }
 string encrypt(string str)
   {
@@ -119,7 +121,6 @@ int main()
    lli a,i=0,temp,len;
    string str;
    char x;
-   //createfiles();
    while(1)
      {
        i=0,pass=0;
@@ -214,18 +215,21 @@ int main()
               else
                 {
                   cout<<"\n\nEnter a valid Filename...";
+                  getch();
                   break;
                 }
             }
           cout<<"\n_________________________________________________________________\n\n"<<ans<<"\n\n";
-          cout<<"THIS IS YOUR ENCRYPTED TEXT \n Choose an option from below : \n \t1. Manually copy this text. \n \t2. Save this text to a file. \n\n";
+          cout<<"THIS IS YOUR ENCRYPTED TEXT \n\n Choose an option from below : \n \t1. Manually copy this text. \n \t2. Save this text to a file. \n\n";
           cin>>a;
           if(a==1)
-          cout<<"The text is succesfully saved in a variable named \"backup\" which is printed above, you can note it down "<<char(24)<<"\n\n\t";
+          {
+            cout<<"The text is succesfully saved in a variable named \"backup\" which is printed above, you can note it down "<<char(24)<<"\n\n\t";
+            getch();
+          }
           else if(a==2)
             {
               save(ans);
-              //cout<<"The text is succesfully saved in a file named \""<<f<<"\""<<char(24)<<"\n\n\t";
               /*ofstream file;
               file.open("encryption_v1.00.txt");
               file<<backup;
@@ -264,11 +268,14 @@ int main()
              cout<<"\n\nTHIS IS YOUR DECRYPTED TEXT \n Choose an option from below : \n \t1. Manually copy this text. \n \t2. Save this text to a file. \n\n";
              cin>>a;
              if(a==1)
-               cout<<"The text is succesfully saved in a variable named \"backup\" which is printed above, you can note it down "<<char(24)<<"\n\n\t";
+               {
+                 cout<<"The text is succesfully saved in a variable named \"backup\" which is printed above, you can note it down "<<char(24)<<"\n\n\t";
+                 getch();
+               }
              else if(a==2)
              {
                save2(str);
-            //   cout<<"The text is succesfully saved in a file named \"decrypted_v.1.00.txt\" "<<char(24)<<"\n\n\t";
+               getch();
              }
            }
            else if(a==2)
@@ -280,12 +287,12 @@ int main()
              if(a==1)
              {
                backup=ans;
-               cout<<ans<<"/nThe text is succesfully saved in a variable named \"backup\" which is printed above, you can note it down "<<char(24)<<"\n\n\t";
+               cout<<ans<<"\nThe text is succesfully saved in a variable named \"backup\" which is printed above, you can note it down "<<char(24)<<"\n\n\t";
+               getch();
              }
              else if(a==2)
              {
                save2(ans);
-               cout<<"The text is succesfully saved in a file named \"decrypted_v.1.00.txt\" "<<char(24)<<"\n\n\t";
              }
            }
          }
@@ -293,6 +300,9 @@ int main()
         break;
         //exit(0);
       else
-        cout<<"Enter a Valid Option. \n \n";
+        {
+          cout<<"Enter a Valid Option. \n \n";
+        getch();
+      }
      }
 }

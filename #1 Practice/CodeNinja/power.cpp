@@ -3,8 +3,6 @@
 #include <bits/stdc++.h>
 //#include <boost/multiprecision/cpp_int.hpp>
 #define lli long long
-#define pb push_back
-#define eb emplace_back
 #define pi 3.14159265358979323846
 #define MOD 1000000007
 #define unbuffer cin.clear(); cin.sync();
@@ -17,10 +15,26 @@ using namespace std;
 int main()
 {
 
-  int n;
-  cin>>n;
-
-
-
-
-}
+lli n,m,temp;
+cin>>n>>m;
+    temp=n;
+    if(n==0)
+      {
+        if(m==0)
+          cout<<"1";
+        else
+          cout<<"0";
+      }
+      else
+      {
+        if(m==0)
+          cout<<"1";
+        else
+        {
+            while(--m)
+          		n*=temp;
+        	cout<<n;
+        }
+        }
+    return 0;
+ }

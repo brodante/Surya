@@ -16,11 +16,30 @@ using namespace std;
 //using namespace boost::multiprecision;
 int main()
 {
-
-  int n;
-  cin>>n;
-
-
-
-
-}
+  ios_base::sync_with_stdio(false);
+   cin.tie(NULL);
+   cout.tie(NULL);
+   test(T)
+   {
+      int n,i,flag=0;
+      cin>>n;
+      int a[n];
+      foi(n)
+      {
+        cin>>a[i];
+      }
+      while(n!=0)
+      {
+      i=n-1;
+      if(a[i]!=0)
+      {
+        cout<<i<<'\n';
+        flag=1;
+        break;
+      }
+      n--;
+      }
+      if(!flag)
+        cout<<"0\n";
+   }
+ }

@@ -3,6 +3,8 @@
 #include <bits/stdc++.h>
 //#include <boost/multiprecision/cpp_int.hpp>
 #define lli long long
+#define pb push_back
+#define eb emplace_back
 #define pi 3.14159265358979323846
 #define MOD 1000000007
 #define unbuffer cin.clear(); cin.sync();
@@ -14,14 +16,17 @@ using namespace std;
 //using namespace boost::multiprecision;
 int main()
 {
-    int a,b,i;
-    cout<<"\t\tTruth Table\n\n";
-    cout<<" A\tB\tA.B\tA+B\t!A\t!B\n";
-    for(i = 0;i <= 3;i++)
-    {
-        a = i / 2;
-        b = i % 2;
-        cout<<" "<<a<<"\t"<<b<<"\t"<<(a&&b)<<"\t"<<(a||b)<<"\t"<<!a<<"\t"<<!b<<endl;
-    }
-return 0;
-}
+  ios_base::sync_with_stdio(false);
+   cin.tie(NULL);
+   cout.tie(NULL);
+   test(T)
+   {
+     lli n;
+     cin>>n;
+     int a[n];
+     foi(n)
+     {
+      cin>>a[i];
+     }
+   }
+ }

@@ -3,8 +3,6 @@
 #include <bits/stdc++.h>
 //#include <boost/multiprecision/cpp_int.hpp>
 #define lli long long
-#define pb push_back
-#define eb emplace_back
 #define pi 3.14159265358979323846
 #define MOD 1000000007
 #define unbuffer cin.clear(); cin.sync();
@@ -16,11 +14,21 @@ using namespace std;
 //using namespace boost::multiprecision;
 int main()
 {
+  //ios_base::sync_with_stdio(false);
+   //cin.tie(NULL);
+   //cout.tie(NULL);
 
-  int n;
-  cin>>n;
+   int n,j;
+   cin>>n;
+   for(int i=n;i>0;i--)
+   {
+     for(int j=1;j<i;j++)
+      cout<<' ';
+     for(j=0;j<=n-i;j++)
+      cout<<'*';
+     for(j=0;j<n-i;j++)
+      cout<<'*';
+     cout<<'\n';
+   }
 
-
-
-
-}
+ }

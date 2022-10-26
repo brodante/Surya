@@ -16,11 +16,17 @@ using namespace std;
 //using namespace boost::multiprecision;
 int main()
 {
-
-  int n;
-  cin>>n;
-
-
-
-
-}
+  ios_base::sync_with_stdio(false);
+   cin.tie(NULL);
+   cout.tie(NULL);
+   test(T)
+   {
+      float n,m,k;
+      cin>>n>>m>>k;
+      float t=n/k;
+      if(ceil(t)<=m)
+        cout<<"yes\n";
+      else
+        cout<<"no\n";
+   }
+ }

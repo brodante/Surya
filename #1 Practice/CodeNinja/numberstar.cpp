@@ -16,11 +16,28 @@ using namespace std;
 //using namespace boost::multiprecision;
 int main()
 {
+  //ios_base::sync_with_stdio(false);
+   //cin.tie(NULL);
+   //cout.tie(NULL);
 
-  int n;
-  cin>>n;
-
-
-
-
+int n;
+cin>>n;
+for(int i=n;i>0;i--)
+{
+  for(int j=1;j<=n;j++)
+  {
+    if(j<=i)
+      cout<<j;
+    else
+      cout<<'*';
+  }
+  for(int j=n;j>0;j--)
+  {
+    if(j<=i)
+      cout<<j;
+    else
+      cout<<'*';
+  }
+  cout<<'\n';
+}
 }

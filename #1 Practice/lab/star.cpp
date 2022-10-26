@@ -58,7 +58,7 @@ for(int i=0;i<3;i++)
      cout<<" ";
    for(int j=0;j<2-i;j++)
      cout<<"*";
-   if((temp)%n==1)
+   if((temp+1)%n==1)
      cout<<"*";
    else
      cout<<" ";
@@ -67,5 +67,4 @@ for(int i=0;i<3;i++)
    cout<<"\n";
    temp++;
  }
-
- }
+}

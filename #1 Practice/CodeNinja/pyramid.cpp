@@ -8,7 +8,7 @@
 #define pi 3.14159265358979323846
 #define MOD 1000000007
 #define unbuffer cin.clear(); cin.sync();
-#define foi(n)  for(lli i=0;i<n;i++)
+#define foi(n)  for(lli i=1;i<=n;i++)
 #define foj(n)  for(lli j=0;j<n;j++)
 #define test(T) lli T;cin>>T;while(T--)
 #define loop(i, a, b) for(int i = (a); i<= (b); i++)
@@ -16,11 +16,19 @@ using namespace std;
 //using namespace boost::multiprecision;
 int main()
 {
-
-  int n;
-  cin>>n;
-
-
-
-
-}
+  //ios_base::sync_with_stdio(false);
+   //cin.tie(NULL);
+  //cout.tie(NULL);
+int n;
+cin>>n;
+foi(n)
+  {
+    for(int j=n;j>i;j--)
+      cout<<' ';
+    for(int k=i;k>=1;k--)
+      cout<<k;
+    for(int l=2;l<=i;l++)
+      cout<<l;
+    cout<<'\n';
+  }
+ }

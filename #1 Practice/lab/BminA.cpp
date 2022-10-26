@@ -45,24 +45,4 @@ int main()
    foi(5)
     cin>>b[i];
     bma(a,b);
-  /*
-   foi(5)
-   {
-     foj(5)
-     {
-       if(b[i]==a[j])
-        {
-          flag=0;
-          break;
-        }
-      }
-       if(flag)
-        {
-          c[k]=b[i];
-          k++;
-        }
-      flag=1;
-     }
-foi(k)
-  cout<<c[i]<<'\n';*/
  }
