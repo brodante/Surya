@@ -25,3 +25,5 @@ if user_phrase == secretphrase:
         decr_temp = Fernet(key).decrypt(temp)
         with open(file,"wb") as temp_file:
             temp_file.write(decr_temp)
+else:
+    print("Invalid Secret Phrase!")
