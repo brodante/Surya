@@ -21,12 +21,15 @@ int main()
    cout.tie(NULL);
    test(T)
    {
-     lli n;
-     cin>>n;
-     int a[n];
-     foi(n)
-     {
-      cin>>a[i];
-     }
+      lli x,n,s=0,h=0;
+      for(int j=1;j<=n;j++)
+      {
+        int income = (int)pow(2,x);
+        if(j==1)
+        {
+          s=(int)(50/100)*income;
+          
+        }
+      }
    }
  }

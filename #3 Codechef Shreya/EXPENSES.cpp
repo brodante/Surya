@@ -21,11 +21,13 @@ int main()
    cout.tie(NULL);
    test(T)
    {
-      lli a,b,c,d;
-      cin>>a>>b>>c>>d;
-      if(a<=c&&b<=d)
-        cout<<"POSSIBLE\n";
-      else
-        cout<<"IMPOSSIBLE\n";
+        lli n,x;
+        cin>>n>>x;
+        lli inc=pow(2,x);
+        for(int i=0;i<n;i++)
+          {
+            inc/=2;
+          }
+        cout<<inc<<'\n';
    }
  }
