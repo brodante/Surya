@@ -16,45 +16,27 @@ using namespace std;
 //using namespace boost::multiprecision;
 int main()
 {
-   ios_base::sync_with_stdio(false);
+  ios_base::sync_with_stdio(false);
    cin.tie(NULL);
    cout.tie(NULL);
    test(T)
    {
-      lli n,temp=0,k,ans=0,flag=0,k2;
-      cin>>n>>k;
-      int a[n],b[n];
+      lli n,temp=0;
+      cin>>n;
+      int a[n];
       for(int i=0;i<n;i++)
         cin>>a[i];
+      sort(a,a+n);
       for(int i=0;i<n;i++)
-        cin>>b[i];
-      for(int i=0;i<n-1;i++)
-          for(int j=0;j<n-i-1;j++)
-              if(b[j]>b[j+1])
-                  {
-                    temp=a[j];
-                    a[j]=a[j+1];
-                    a[j+1]=temp;
-                    temp=b[j];
-                    b[j]=b[j+1];
-                    b[j+1]=temp;
-                  }
-      temp=-1;
-      k2=k;
-      for(int i=0;i<k;i++)
       {
-        if(temp==a[i])
-            k++;
-        else if(temp!=a[i+1])
+        if(a[i]!=i+1&&a[i]<i+1)
+            temp+=i+1-a[i];
+        else if(a[i]>i+1)
         {
-          flag++;
-          ans+=b[i];
-          temp=a[i];
+          temp=-1;
+          break;
         }
       }
-      if(flag<k2)
-        cout<<"-1\n";
-      else
-        cout<<ans<<'\n';
+      cout<<temp<<'\n';
    }
  }
