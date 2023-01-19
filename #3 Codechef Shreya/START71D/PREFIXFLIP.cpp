@@ -1,6 +1,7 @@
 /*Code by rubb3rducky*/
 #include <bits/stdc++.h>
 //#include <boost/multiprecision/cpp_int.hpp>
+//use INT_MAX = 2147483647
 #define lli long long
 #define pb push_back
 #define eb emplace_back
@@ -15,24 +16,35 @@ using namespace std;
 //using namespace boost::multiprecision;
 int main()
 {
-  int a,b,c;
-  cin>>a>>b>>c;
   ios_base::sync_with_stdio(false);
    cin.tie(NULL);
    cout.tie(NULL);
-   int ans=0,temp=0,temp2=0,x=1;
-   while(a!=0||b!=0||c!=0)
-    {
-      temp=a%10+b%10+c%10+temp2;
-      temp2=temp/10;
-      temp%=10;
-      ans+=temp*x;
-      x*=10;
-      a/=10;
-      b/=10;
-      c/=10;
-    }
-    if(temp2)
-        ans+=temp2*x;
-    return ans;
+   test(T)
+   {
+   int a,b,temp=INT_MAX;
+   cin>>a>>b;
+   string s;
+   cin>>s;
+   int arr[a];
+   int c=0;
+   for(int i=1; i<a; i++){
+       if(s[i-1]!=s[i]){
+           c++;
+           arr[i]=c;
+       }
+       else
+       arr[i]=c;
+   }
+   arr[0]=0;
+   for(int i=a-1;i>=0;i--)
+   {
+       if((i-(b-1))<0)
+        break;
+       int check=arr[i]-arr[i-b+1];
+       if(s[i]=='0')
+        check++;
+       temp=min(temp,check);
+   }
+   cout<<temp<<'\n';
+   }
  }

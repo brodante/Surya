@@ -15,24 +15,33 @@ using namespace std;
 //using namespace boost::multiprecision;
 int main()
 {
-  int a,b,c;
-  cin>>a>>b>>c;
   ios_base::sync_with_stdio(false);
    cin.tie(NULL);
    cout.tie(NULL);
-   int ans=0,temp=0,temp2=0,x=1;
-   while(a!=0||b!=0||c!=0)
-    {
-      temp=a%10+b%10+c%10+temp2;
-      temp2=temp/10;
-      temp%=10;
-      ans+=temp*x;
-      x*=10;
-      a/=10;
-      b/=10;
-      c/=10;
-    }
-    if(temp2)
-        ans+=temp2*x;
-    return ans;
+   test(T)
+   {
+      int n,max=0,max2=0;
+      cin>>n;
+      int a[n],b[n],c[n];
+      foi(n)
+      {
+        cin>>a[i];
+      }
+      foi(n)
+      {
+        cin>>b[i];
+      }
+      foi(n)
+      {
+        if(a[i]!=0&&b[i]!=0)
+          {
+            max++;
+          }
+        if(max>max2)
+          max2=max;
+        if(a[i]==0||b[i]==0)
+          max=0;
+      }
+      cout<<max2<<'\n';
+   }
  }
