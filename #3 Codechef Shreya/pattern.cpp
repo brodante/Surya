@@ -12,6 +12,7 @@
 using namespace std;
 int main()
 {
+  // 73 76 89 3 = I L Y ♥
   ios_base::sync_with_stdio(false);
    cin.tie(NULL);
   for(int i=1;i<=3;i++)
