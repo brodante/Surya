@@ -1,35 +1,31 @@
-/*Code by Surya a.k.a Sunny*/
-/* by https://www.codechef.com/users/spsc */
-#include <bits/stdc++.h>
-//#include <boost/multiprecision/cpp_int.hpp>
-#define lli long long
-#define pi 3.14159265358979323846
-#define MOD 1000000007
-#define foi(n)  for(lli i=0;i<n;i++)
-#define foj(n)  for(lli j=0;j<n;j++)
-#define test(T) lli T;cin>>T;while(T--)
-#define loop(i, a, b) for(int i = (a); i<= (b); i++)
-using namespace std;
-//using namespace boost::multiprecision;
-int main()
+#include <iostream>
+#include <cstring>
+
+void xor_cipher(char* param_1, unsigned long param_2, char* param_3, unsigned long param_4)
 {
-  ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
-   cout.tie(NULL);
-   test(T)
-   {
-      lli n,k,count=0;
-      cin>>n>>k;
-      lli a[n];
-      foi(n)
-          cin>>a[i];
-        sort(a,a+n);
-        for(int i=0;i<n;i+=k)
-          {
-            count++;
-            while(a[i]==a[i+1])
-              i++;
-          }
-        cout<<count<<'\n';
-   }
- }
+    for (unsigned long i = 0; i < param_2; i++)
+    {
+        param_1[i] = param_1[i] ^ param_3[i % param_4];
+    }
+}
+
+int main(int argc, const char** argv)
+{
+    const char* encryptedFlag = "38352E353A370B2D1E1B165157430715675B5749165206135C4D3C0F5D4E4A07524753103D5A004E4A18";
+    const char* secretKey = "secret_key";
+    unsigned long encryptedFlagLength = strlen(encryptedFlag);
+    unsigned long secretKeyLength = strlen(secretKey);
+
+    char* decryptedFlag = new char[encryptedFlagLength + 1];
+    strcpy(decryptedFlag, encryptedFlag);
+
+    // Call xor_cipher to decrypt the flag
+    xor_cipher(decryptedFlag, encryptedFlagLength, const_cast<char*>(secretKey), secretKeyLength);
+
+    // The decrypted flag will be available in the decryptedFlag variable
+    std::cout << "Decrypted Flag: " << decryptedFlag << std::endl;
+
+    delete[] decryptedFlag;
+
+    return 0;
+}
