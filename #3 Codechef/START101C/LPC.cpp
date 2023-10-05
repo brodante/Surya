@@ -28,7 +28,7 @@ int main()
      foi(n)
       a[i]=s[i]-'0';
      foi(m)
-     b[i]=k[i]-'0';
+      b[i]=k[i]-'0';
      int ans=INT_MAX;
      foi(n-m+1)
      {
