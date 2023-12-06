@@ -13,6 +13,18 @@
 #define loop(i, a, b) for(int i = (a); i<= (b); i++)
 using namespace std;
 //using namespace boost::multiprecision;
+bool isVowel(char x)
+{
+    return x=='A'||x=='E'||x=='I'||x=='O'||x=='U';
+}
+bool solve(string s)
+{
+    string a="CODETOWN";
+    foi(s.length())
+        if((isVowel(s[i])&&!isVowel(a[i]))||(!isVowel(s[i])&&isVowel(a[i])))
+            return false;
+    return true;
+}
 int main()
 {
   ios_base::sync_with_stdio(false);
@@ -20,17 +32,11 @@ int main()
    cout.tie(NULL);
    test(T)
    {
-      int n;
-      cin>>n;
-      string s;
-      cin>>s;
-      int hashh[26]={0};
-      foi(n)
-          hashh[s[i]-'a']++;
-      lli ans=1;
-      foi(26)
-          ans=(ans*(hashh[i]+1))%MOD;
-      cout<<(ans-1)<<'\n';
-    }
-    return 0;
-}
+     string s;
+     cin>>s;
+     if(solve(s))
+         cout<<"YES\n";
+     else
+         cout<<"NO\n";
+   }
+ }

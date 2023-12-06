@@ -20,17 +20,12 @@ int main()
    cout.tie(NULL);
    test(T)
    {
-      int n;
-      cin>>n;
-      string s;
-      cin>>s;
-      int hashh[26]={0};
-      foi(n)
-          hashh[s[i]-'a']++;
-      lli ans=1;
-      foi(26)
-          ans=(ans*(hashh[i]+1))%MOD;
-      cout<<(ans-1)<<'\n';
-    }
-    return 0;
-}
+      int n,x,y;
+      cin>>n>>x>>y;
+      if(y>((n*x)>>1))
+        cout<<"YES\n";
+      else
+        cout<<"NO\n";
+   }
+  return 0;
+ }
